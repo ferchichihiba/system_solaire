@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercure</title>
+    <style>
+       /* Corps principal */
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* En-tête */
+header {
+    padding: 20px;
+    background: linear-gradient(90deg, #333, #444);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Bouton retour */
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    background: #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.back-button:hover {
+    background: #666;
+    transform: scale(1.1);
+}
+
+/* Animation des sections */
+main section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 15px;
+    background: rgba(50, 50, 70, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Galerie */
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: zoomIn 1.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Vidéo */
+.video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neptune</h1>
+        <a href="index.html" class="back-button">Retour à la liste des planètes</a>
+    </header>
+    <main>
+        <section>
+            <h2>À propos de Neptune</h2>
+            <p>Une planète glacée avec une atmosphère riche en méthane, qui lui donne sa couleur bleue.</p>
+        </section>
+        <section class="gallery">
+            <h2>Galerie de photos</h2>
+            <img src="n1.jpg" alt="Photo de venus">
+            <img src="n2.jpg" alt="Photo de venus">
+            <img src="n3.jpg" alt="Photo de venus">
+            <img src="n4.jpg" alt="Photo de venus">
+            <img src="n5.jpg" alt="Photo de venus">
+        </section>
+        <section class="video">
+            <h2>Vidéo explicative</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8NPTlk-WR-Y?si=O8aU_8s7EhPze0YT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+</body>
+</html>
