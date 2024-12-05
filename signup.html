@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <script>
+        function submitForm() {
+            // Affiche une alerte pour indiquer que le formulaire a été soumis avec succès
+            alert("Formulaire envoyé avec succès !");
+            
+            // Redirige vers la page de confirmation
+            window.location.href = "success_page.html";  // Le nom de la page vers laquelle tu veux rediriger
+        }
+    </script>
+</head>
+<body>
+    <h2>Inscription</h2>
+    <form method="POST" onsubmit="submitForm(); return false;">
+        <label>Nom d'utilisateur :</label>
+        <input type="text" name="username" required>
+        <br>
+        <label>Email :</label>
+        <input type="email" name="email" required>
+        <br>
+        <label>Mot de passe :</label>
+        <input type="password" name="password" required>
+        <br>
+        <button type="submit">S'inscrire</button>
+    </form>
+</body>
+</html>

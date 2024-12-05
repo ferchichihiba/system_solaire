@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assurez-vous d'avoir lié votre fichier CSS -->
+    <script>
+        function handleSubmit(event) {
+            // Affiche une alerte pour informer que le formulaire a bien été soumis
+            alert("Connexion réussie !");
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Se connecter</h2>
+        <form method="POST" onsubmit="handleSubmit(event); return false;">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+        <div class="signup-link">
+            <p>Pas encore de compte ? <a href="signup.html">S'inscrire</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background: #333;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    background: #444;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background: #555;
+}
+
+main {
+    padding: 20px;
+}
+
+.planet-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.planet-button {
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.planet-button:hover {
+    background: #555;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.video iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+    margin-top: 20px;
+}
