@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Bienvenue sur votre page d'accueil</h2>
+    <p>Vous êtes connecté !</p>
+    <button onclick="logout()">Se déconnecter</button>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('users');
+            alert('Vous avez été déconnecté.');
+            window.location.href = 'login.html'; // Redirige vers la page de connexion
+        }
+    </script>
+
+</body>
+</html>

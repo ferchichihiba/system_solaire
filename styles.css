@@ -1,0 +1,123 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0d1b2a, #1b263b, #415a77);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* En-tête principal */
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #ffd700;
+    text-shadow: 0px 0px 10px #f0e68c;
+}
+
+/* Sous-titres */
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #ffcc33;
+    text-shadow: 0px 0px 5px #ffcc33;
+}
+
+/* Formulaire */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+form button {
+    background: #ffcc33;
+    border: none;
+    color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+form button:hover {
+    background: #ffd700;
+    color: #000000;
+}
+
+/* Tableau des utilisateurs */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+table th, table td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #415a77;
+    color: #ffd700;
+    text-shadow: 0px 0px 3px #ffd700;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Boutons d'action */
+table button {
+    background: #ff4500;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table button:hover {
+    background: #ff6347;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    form {
+        width: 90%;
+    }
+}
