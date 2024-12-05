@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Système Solaire</title>
+  <style>
+   
+      body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header input {
+  padding: 10px;
+  margin-top: 10px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#planet-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.planet {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.planet img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid #d5cdcd; /* Ajoute un cadre autour de l'image */
+  border-radius: 1px; /* Bordure arrondie pour un look plus doux */
+  padding: 1px; /* Ajoute un peu d'espace entre l'image et le cadre */
+}
+
+.planet h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.planet p {
+  font-size: 14px;
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  #planet-list {
+    justify-content: flex-start;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Vue d'ensemble du Système Solaire</h1>
+    <input type="text" id="search" placeholder="Rechercher une planète..." onkeyup="filterPlanets()">
+  </header>
+
+  <div id="planet-list">
+    <div class="planet" data-name="Mercure">
+      <img src="OIP.jfif" alt="Mercure">
+      <h3>Mercure</h3>
+      <p>Distance au Soleil: 57.91 millions km</p>
+      <p>Masse: 3.301 × 10^23 kg</p>
+    </div>
+
+    <div class="planet" data-name="Vénus">
+      <img src="OIP (2).jfif" alt="Vénus">
+      <h3>Vénus</h3>
+      <p>Distance au Soleil: 108.2 millions km</p>
+      <p>Masse: 4.867 × 10^24 kg</p>
+    </div>
+
+    <div class="planet" data-name="Terre">
+      <img src="OIP (1).jfif">
+      <h3>Terre</h3>
+      <p>Distance au Soleil: 149.6 millions km</p>
+      <p>Masse: 5.972 × 10^24 kg</p>
+    </div>
+
+    <div class="planet" data-name="Mars">
+      <img src="OIP (3).jfif" alt="Mars">
+      <h3>Mars</h3>
+      <p>Distance au Soleil: 227.9 millions km</p>
+      <p>Masse: 6.417 × 10^23 kg</p>
+    </div>
+
+    <div class="planet" data-name="Jupiter">
+      <img src="OIP (4).jfif" alt="Jupiter">
+      <h3>Jupiter</h3>
+      <p>Distance au Soleil: 778.5 millions km</p>
+      <p>Masse: 1.898 × 10^27 kg</p>
+    </div>
+
+    <div class="planet" data-name="Saturne">
+      <img src="télécharger.jfif" alt="Saturne">
+      <h3>Saturne</h3>
+      <p>Distance au Soleil: 1.429 milliards km</p>
+      <p>Masse: 5.683 × 10^26 kg</p>
+    </div>
+
+    <div class="planet" data-name="Uranus">
+      <img src="OIP (5).jfif" alt="Uranus">
+      <h3>Uranus</h3>
+      <p>Distance au Soleil: 2.871 milliards km</p>
+      <p>Masse: 8.681 × 10^25 kg</p>
+    </div>
+
+    <div class="planet" data-name="Neptune">
+      <img src="OIP (6).jfif" alt="Neptune">
+      <h3>Neptune</h3>
+      <p>Distance au Soleil: 4.495 milliards km</p>
+      <p>Masse: 1.024 × 10^26 kg</p>
+    </div>
+  </div>
+
+  <script>
+    function filterPlanets() {
+      const searchInput = document.getElementById('search').value.toLowerCase();
+      const planets = document.querySelectorAll('.planet');
+
+      planets.forEach(planet => {
+        const planetName = planet.getAttribute('data-name').toLowerCase();
+        if (planetName.includes(searchInput)) {
+          planet.style.display = 'block';
+        } else {
+          planet.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
